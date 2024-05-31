@@ -17,4 +17,4 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Grid="*res://Board/grid.gd"
+Grid="*res://GameState/grid.gd"

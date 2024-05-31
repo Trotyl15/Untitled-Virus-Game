@@ -1,7 +1,5 @@
 extends Node
 
-#const Tile = preload("res://Board/tile.gd")
-
 var width = 100
 var height = 50
 var grid : Array
