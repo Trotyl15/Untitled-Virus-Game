@@ -11,5 +11,3 @@ script = ExtResource("1_gunxn")
 layout_mode = 0
 offset_right = 24.0
 offset_bottom = 24.0
-
-[connection signal="toggled" from="CheckBox" to="." method="_on_check_box_toggled"]
