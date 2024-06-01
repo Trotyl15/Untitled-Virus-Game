@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dik76ms850gbj"]
+[gd_scene load_steps=9 format=3 uid="uid://dik76ms850gbj"]
 
 [ext_resource type="Script" path="res://Scenes/night_and_day.gd" id="1_lv1gq"]
 [ext_resource type="PackedScene" uid="uid://bpdc8vvs1qspe" path="res://SkillTree/home_node.tscn" id="2_nvajc"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://ddvqcp4nrlqki" path="res://Assets/Temp/skills1.png" id="4_b5qgj"]
 [ext_resource type="Texture2D" uid="uid://dcdf4vg7f1p56" path="res://Assets/Temp/skills4.png" id="5_43mgi"]
 [ext_resource type="Texture2D" uid="uid://bdxmfemn0pmfl" path="res://Assets/Temp/skills5.png" id="6_u3260"]
-[ext_resource type="Texture2D" uid="uid://dcl5bmw88ngpa" path="res://Assets/Temp/skills6.png" id="7_54q86"]
 [ext_resource type="Texture2D" uid="uid://cp07qfuyrg8dw" path="res://Assets/Temp/skills2.png" id="8_7as5b"]
 [ext_resource type="Texture2D" uid="uid://b8acq3ygt8bk0" path="res://Assets/Temp/skills3.png" id="9_fcmxv"]
 
@@ -30,10 +29,10 @@ texture = ExtResource("4_b5qgj")
 
 [node name="RateUp" parent="Night/HomeNode/Water" instance=ExtResource("3_i5ycj")]
 layout_mode = 0
-offset_left = -70.0
-offset_top = 124.0
-offset_right = -20.0
-offset_bottom = 174.0
+offset_left = -47.0
+offset_top = 128.0
+offset_right = 3.0
+offset_bottom = 178.0
 texture = ExtResource("5_43mgi")
 
 [node name="RateUp2" parent="Night/HomeNode/Water/RateUp" instance=ExtResource("3_i5ycj")]
@@ -44,10 +43,10 @@ texture = ExtResource("5_43mgi")
 
 [node name="DistUp" parent="Night/HomeNode/Water" instance=ExtResource("3_i5ycj")]
 layout_mode = 0
-offset_left = 12.0
-offset_top = 124.0
-offset_right = 62.0
-offset_bottom = 174.0
+offset_left = 42.0
+offset_top = 131.0
+offset_right = 92.0
+offset_bottom = 181.0
 texture = ExtResource("6_u3260")
 
 [node name="DistUp2" parent="Night/HomeNode/Water/DistUp" instance=ExtResource("3_i5ycj")]
@@ -56,34 +55,20 @@ offset_top = 101.0
 offset_bottom = 151.0
 texture = ExtResource("6_u3260")
 
-[node name="Spec" parent="Night/HomeNode/Water" instance=ExtResource("3_i5ycj")]
-layout_mode = 0
-offset_left = 88.0
-offset_top = 123.0
-offset_right = 138.0
-offset_bottom = 173.0
-texture = ExtResource("7_54q86")
-
-[node name="Spec2" parent="Night/HomeNode/Water/Spec" instance=ExtResource("3_i5ycj")]
-layout_mode = 0
-offset_top = 101.0
-offset_bottom = 151.0
-texture = ExtResource("7_54q86")
-
 [node name="Air" parent="Night/HomeNode" instance=ExtResource("3_i5ycj")]
 layout_mode = 0
-offset_left = 423.0
-offset_top = 93.0
-offset_right = 473.0
-offset_bottom = 143.0
+offset_left = 406.0
+offset_top = 92.0
+offset_right = 456.0
+offset_bottom = 142.0
 texture = ExtResource("8_7as5b")
 
 [node name="RateUp" parent="Night/HomeNode/Air" instance=ExtResource("3_i5ycj")]
 layout_mode = 0
-offset_left = -70.0
-offset_top = 124.0
-offset_right = -20.0
-offset_bottom = 174.0
+offset_left = -36.0
+offset_top = 122.0
+offset_right = 14.0
+offset_bottom = 172.0
 texture = ExtResource("5_43mgi")
 
 [node name="RateUp2" parent="Night/HomeNode/Air/RateUp" instance=ExtResource("3_i5ycj")]
@@ -94,9 +79,9 @@ texture = ExtResource("5_43mgi")
 
 [node name="DistUp" parent="Night/HomeNode/Air" instance=ExtResource("3_i5ycj")]
 layout_mode = 0
-offset_left = 12.0
+offset_left = 51.0
 offset_top = 124.0
-offset_right = 62.0
+offset_right = 101.0
 offset_bottom = 174.0
 texture = ExtResource("6_u3260")
 
@@ -105,20 +90,6 @@ layout_mode = 0
 offset_top = 101.0
 offset_bottom = 151.0
 texture = ExtResource("6_u3260")
-
-[node name="Spec" parent="Night/HomeNode/Air" instance=ExtResource("3_i5ycj")]
-layout_mode = 0
-offset_left = 88.0
-offset_top = 123.0
-offset_right = 138.0
-offset_bottom = 173.0
-texture = ExtResource("7_54q86")
-
-[node name="Spec2" parent="Night/HomeNode/Air/Spec" instance=ExtResource("3_i5ycj")]
-layout_mode = 0
-offset_top = 101.0
-offset_bottom = 151.0
-texture = ExtResource("7_54q86")
 
 [node name="Regular" parent="Night/HomeNode" instance=ExtResource("3_i5ycj")]
 layout_mode = 0
@@ -130,9 +101,9 @@ texture = ExtResource("9_fcmxv")
 
 [node name="RateUp" parent="Night/HomeNode/Regular" instance=ExtResource("3_i5ycj")]
 layout_mode = 0
-offset_left = -70.0
+offset_left = -47.0
 offset_top = 124.0
-offset_right = -20.0
+offset_right = 3.0
 offset_bottom = 174.0
 texture = ExtResource("5_43mgi")
 
@@ -144,9 +115,9 @@ texture = ExtResource("5_43mgi")
 
 [node name="DistUp" parent="Night/HomeNode/Regular" instance=ExtResource("3_i5ycj")]
 layout_mode = 0
-offset_left = 12.0
+offset_left = 49.0
 offset_top = 124.0
-offset_right = 62.0
+offset_right = 99.0
 offset_bottom = 174.0
 texture = ExtResource("6_u3260")
 
@@ -156,24 +127,17 @@ offset_top = 101.0
 offset_bottom = 151.0
 texture = ExtResource("6_u3260")
 
-[node name="Spec" parent="Night/HomeNode/Regular" instance=ExtResource("3_i5ycj")]
-layout_mode = 0
-offset_left = 88.0
-offset_top = 123.0
-offset_right = 138.0
-offset_bottom = 173.0
-texture = ExtResource("7_54q86")
-
-[node name="Spec2" parent="Night/HomeNode/Regular/Spec" instance=ExtResource("3_i5ycj")]
-layout_mode = 0
-offset_top = 101.0
-offset_bottom = 151.0
-texture = ExtResource("7_54q86")
-
-[node name="Confirm" type="Button" parent="Night"]
+[node name="NightConfirm" type="Button" parent="Night"]
 offset_left = 1033.0
 offset_top = 579.0
 offset_right = 1073.0
 offset_bottom = 599.0
 
-[connection signal="pressed" from="Night/Confirm" to="." method="_on_confirm_pressed"]
+[node name="Button" type="Button" parent="."]
+offset_left = 1014.0
+offset_top = 1305.0
+offset_right = 1114.0
+offset_bottom = 1360.0
+
+[connection signal="pressed" from="Night/NightConfirm" to="." method="_on_night_confirm_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

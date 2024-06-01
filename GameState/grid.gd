@@ -4,7 +4,6 @@ var width = 100
 var height = 50
 var grid : Array
 var rng = RandomNumberGenerator.new()
-var day = 0
 
 func _ready():
 	var start = Vector2(rng.randi_range(0, width), rng.randi_range(0, height))
