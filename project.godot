@@ -11,10 +11,11 @@ config_version=5
 [application]
 
 config/name="Untitled-virus-game"
-run/main_scene="res://Scenes/board.tscn"
+run/main_scene="res://Scenes/night.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Grid="*res://GameState/grid.gd"
+Virus="*res://GameState/virus.gd"

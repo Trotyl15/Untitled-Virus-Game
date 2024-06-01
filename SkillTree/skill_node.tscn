@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bb3hb2krwsnu6"]
+
+[ext_resource type="Script" path="res://SkillTree/skill_node.gd" id="1_gunxn"]
+
+[node name="SkillNode" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_gunxn")
+
+[node name="CheckBox" type="CheckBox" parent="."]
+layout_mode = 0
+offset_right = 24.0
+offset_bottom = 24.0
+
+[connection signal="toggled" from="CheckBox" to="." method="_on_check_box_toggled"]
