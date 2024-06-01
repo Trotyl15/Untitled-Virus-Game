@@ -1,40 +1,179 @@
-[gd_scene load_steps=7 format=3 uid="uid://dik76ms850gbj"]
+[gd_scene load_steps=10 format=3 uid="uid://dik76ms850gbj"]
 
 [ext_resource type="Script" path="res://Scenes/night_and_day.gd" id="1_lv1gq"]
 [ext_resource type="PackedScene" uid="uid://bpdc8vvs1qspe" path="res://SkillTree/home_node.tscn" id="2_nvajc"]
 [ext_resource type="PackedScene" uid="uid://bb3hb2krwsnu6" path="res://SkillTree/skill_node.tscn" id="3_i5ycj"]
-
-[sub_resource type="Texture2DRD" id="Texture2DRD_sb6gv"]
-
-[sub_resource type="Gradient" id="Gradient_i3ksj"]
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_xelet"]
-gradient = SubResource("Gradient_i3ksj")
-width = 10
+[ext_resource type="Texture2D" uid="uid://ddvqcp4nrlqki" path="res://Assets/Temp/skills1.png" id="4_b5qgj"]
+[ext_resource type="Texture2D" uid="uid://dcdf4vg7f1p56" path="res://Assets/Temp/skills4.png" id="5_43mgi"]
+[ext_resource type="Texture2D" uid="uid://bdxmfemn0pmfl" path="res://Assets/Temp/skills5.png" id="6_u3260"]
+[ext_resource type="Texture2D" uid="uid://dcl5bmw88ngpa" path="res://Assets/Temp/skills6.png" id="7_54q86"]
+[ext_resource type="Texture2D" uid="uid://cp07qfuyrg8dw" path="res://Assets/Temp/skills2.png" id="8_7as5b"]
+[ext_resource type="Texture2D" uid="uid://b8acq3ygt8bk0" path="res://Assets/Temp/skills3.png" id="9_fcmxv"]
 
 [node name="NightAndDay" type="Node2D"]
 script = ExtResource("1_lv1gq")
 
-[node name="HomeNode" parent="." instance=ExtResource("2_nvajc")]
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 1200)
 
-[node name="Weather" parent="HomeNode" instance=ExtResource("3_i5ycj")]
+[node name="Night" type="Node2D" parent="."]
+
+[node name="HomeNode" parent="Night" instance=ExtResource("2_nvajc")]
+
+[node name="Water" parent="Night/HomeNode" instance=ExtResource("3_i5ycj")]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 62.0
-offset_right = 149.0
-offset_bottom = 102.0
-texture = SubResource("Texture2DRD_sb6gv")
+offset_left = 158.0
+offset_top = 93.0
+offset_right = 208.0
+offset_bottom = 143.0
+texture = ExtResource("4_b5qgj")
 
-[node name="SkillNode2" parent="HomeNode/Weather" instance=ExtResource("3_i5ycj")]
+[node name="RateUp" parent="Night/HomeNode/Water" instance=ExtResource("3_i5ycj")]
 layout_mode = 0
-offset_left = 101.0
-offset_right = 141.0
-texture = SubResource("GradientTexture1D_xelet")
+offset_left = -70.0
+offset_top = 124.0
+offset_right = -20.0
+offset_bottom = 174.0
+texture = ExtResource("5_43mgi")
 
-[node name="Confirm" type="Button" parent="."]
+[node name="RateUp2" parent="Night/HomeNode/Water/RateUp" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_top = 101.0
+offset_bottom = 151.0
+texture = ExtResource("5_43mgi")
+
+[node name="DistUp" parent="Night/HomeNode/Water" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 124.0
+offset_right = 62.0
+offset_bottom = 174.0
+texture = ExtResource("6_u3260")
+
+[node name="DistUp2" parent="Night/HomeNode/Water/DistUp" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_top = 101.0
+offset_bottom = 151.0
+texture = ExtResource("6_u3260")
+
+[node name="Spec" parent="Night/HomeNode/Water" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 123.0
+offset_right = 138.0
+offset_bottom = 173.0
+texture = ExtResource("7_54q86")
+
+[node name="Spec2" parent="Night/HomeNode/Water/Spec" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_top = 101.0
+offset_bottom = 151.0
+texture = ExtResource("7_54q86")
+
+[node name="Air" parent="Night/HomeNode" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_left = 423.0
+offset_top = 93.0
+offset_right = 473.0
+offset_bottom = 143.0
+texture = ExtResource("8_7as5b")
+
+[node name="RateUp" parent="Night/HomeNode/Air" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_left = -70.0
+offset_top = 124.0
+offset_right = -20.0
+offset_bottom = 174.0
+texture = ExtResource("5_43mgi")
+
+[node name="RateUp2" parent="Night/HomeNode/Air/RateUp" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_top = 101.0
+offset_bottom = 151.0
+texture = ExtResource("5_43mgi")
+
+[node name="DistUp" parent="Night/HomeNode/Air" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 124.0
+offset_right = 62.0
+offset_bottom = 174.0
+texture = ExtResource("6_u3260")
+
+[node name="DistUp2" parent="Night/HomeNode/Air/DistUp" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_top = 101.0
+offset_bottom = 151.0
+texture = ExtResource("6_u3260")
+
+[node name="Spec" parent="Night/HomeNode/Air" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 123.0
+offset_right = 138.0
+offset_bottom = 173.0
+texture = ExtResource("7_54q86")
+
+[node name="Spec2" parent="Night/HomeNode/Air/Spec" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_top = 101.0
+offset_bottom = 151.0
+texture = ExtResource("7_54q86")
+
+[node name="Regular" parent="Night/HomeNode" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_left = 672.0
+offset_top = 95.0
+offset_right = 722.0
+offset_bottom = 145.0
+texture = ExtResource("9_fcmxv")
+
+[node name="RateUp" parent="Night/HomeNode/Regular" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_left = -70.0
+offset_top = 124.0
+offset_right = -20.0
+offset_bottom = 174.0
+texture = ExtResource("5_43mgi")
+
+[node name="RateUp2" parent="Night/HomeNode/Regular/RateUp" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_top = 101.0
+offset_bottom = 151.0
+texture = ExtResource("5_43mgi")
+
+[node name="DistUp" parent="Night/HomeNode/Regular" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 124.0
+offset_right = 62.0
+offset_bottom = 174.0
+texture = ExtResource("6_u3260")
+
+[node name="DistUp2" parent="Night/HomeNode/Regular/DistUp" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_top = 101.0
+offset_bottom = 151.0
+texture = ExtResource("6_u3260")
+
+[node name="Spec" parent="Night/HomeNode/Regular" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 123.0
+offset_right = 138.0
+offset_bottom = 173.0
+texture = ExtResource("7_54q86")
+
+[node name="Spec2" parent="Night/HomeNode/Regular/Spec" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_top = 101.0
+offset_bottom = 151.0
+texture = ExtResource("7_54q86")
+
+[node name="Confirm" type="Button" parent="Night"]
 offset_left = 1033.0
 offset_top = 579.0
 offset_right = 1073.0
 offset_bottom = 599.0
 
-[connection signal="pressed" from="Confirm" to="." method="_on_confirm_pressed"]
+[connection signal="pressed" from="Night/Confirm" to="." method="_on_confirm_pressed"]
