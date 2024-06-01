@@ -2,8 +2,8 @@ extends Node2D
 
 var day = 0
 
-const NIGHT_POS = Vector2(576, 324)
-const MAP_POS = Vector2(576, 1200)
+const NIGHT_POS = Vector2(576, 1200)
+const MAP_POS = Vector2(576, 324)
 const WEATHER_POS = Vector2(576, 2000)
 
 func _ready():
@@ -37,9 +37,6 @@ func day_end():
 # increase day counter
 # move camera
 	get_node("Camera2D").position = NIGHT_POS
-
-
-
 
 
 func _on_button_pressed():

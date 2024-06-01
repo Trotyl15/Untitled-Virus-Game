@@ -16,6 +16,7 @@ script = ExtResource("1_lv1gq")
 position = Vector2(576, 1200)
 
 [node name="Night" type="Node2D" parent="."]
+position = Vector2(0, 876)
 
 [node name="HomeNode" parent="Night" instance=ExtResource("2_nvajc")]
 
