@@ -1,7 +1,8 @@
 extends TextureRect
+class_name SkillNode
 
 @onready var box = get_node("CheckBox")
-
+var locked = false
 
 func _process(_delta):
 	if not get_parent().box_state():
@@ -17,8 +18,13 @@ func box_state():
 
 func lock_in():
 	get_node("ColorRect").queue_free()
+	locked = true
 	box.queue_free()
 
 
 func _on_check_box_toggled(toggled_on):
 	get_node("ColorRect").visible = not get_node("ColorRect").visible
+
+
+func is_locked():
+	return locked

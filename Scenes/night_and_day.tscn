@@ -18,9 +18,9 @@ position = Vector2(576, 1200)
 [node name="Night" type="Node2D" parent="."]
 position = Vector2(0, 876)
 
-[node name="HomeNode" parent="Night" instance=ExtResource("2_nvajc")]
+[node name="WeatherSkillHomeNode" parent="Night" instance=ExtResource("2_nvajc")]
 
-[node name="Water" parent="Night/HomeNode" instance=ExtResource("3_i5ycj")]
+[node name="Water" parent="Night/WeatherSkillHomeNode" instance=ExtResource("3_i5ycj")]
 layout_mode = 0
 offset_left = 158.0
 offset_top = 93.0
@@ -28,7 +28,7 @@ offset_right = 208.0
 offset_bottom = 143.0
 texture = ExtResource("4_b5qgj")
 
-[node name="RateUp" parent="Night/HomeNode/Water" instance=ExtResource("3_i5ycj")]
+[node name="RateUp" parent="Night/WeatherSkillHomeNode/Water" instance=ExtResource("3_i5ycj")]
 layout_mode = 0
 offset_left = -47.0
 offset_top = 128.0
@@ -36,13 +36,13 @@ offset_right = 3.0
 offset_bottom = 178.0
 texture = ExtResource("5_43mgi")
 
-[node name="RateUp2" parent="Night/HomeNode/Water/RateUp" instance=ExtResource("3_i5ycj")]
+[node name="RateUp2" parent="Night/WeatherSkillHomeNode/Water/RateUp" instance=ExtResource("3_i5ycj")]
 layout_mode = 0
 offset_top = 101.0
 offset_bottom = 151.0
 texture = ExtResource("5_43mgi")
 
-[node name="DistUp" parent="Night/HomeNode/Water" instance=ExtResource("3_i5ycj")]
+[node name="DistUp" parent="Night/WeatherSkillHomeNode/Water" instance=ExtResource("3_i5ycj")]
 layout_mode = 0
 offset_left = 42.0
 offset_top = 131.0
@@ -50,13 +50,13 @@ offset_right = 92.0
 offset_bottom = 181.0
 texture = ExtResource("6_u3260")
 
-[node name="DistUp2" parent="Night/HomeNode/Water/DistUp" instance=ExtResource("3_i5ycj")]
+[node name="DistUp2" parent="Night/WeatherSkillHomeNode/Water/DistUp" instance=ExtResource("3_i5ycj")]
 layout_mode = 0
 offset_top = 101.0
 offset_bottom = 151.0
 texture = ExtResource("6_u3260")
 
-[node name="Air" parent="Night/HomeNode" instance=ExtResource("3_i5ycj")]
+[node name="Air" parent="Night/WeatherSkillHomeNode" instance=ExtResource("3_i5ycj")]
 layout_mode = 0
 offset_left = 406.0
 offset_top = 92.0
@@ -64,7 +64,7 @@ offset_right = 456.0
 offset_bottom = 142.0
 texture = ExtResource("8_7as5b")
 
-[node name="RateUp" parent="Night/HomeNode/Air" instance=ExtResource("3_i5ycj")]
+[node name="RateUp" parent="Night/WeatherSkillHomeNode/Air" instance=ExtResource("3_i5ycj")]
 layout_mode = 0
 offset_left = -36.0
 offset_top = 122.0
@@ -72,13 +72,13 @@ offset_right = 14.0
 offset_bottom = 172.0
 texture = ExtResource("5_43mgi")
 
-[node name="RateUp2" parent="Night/HomeNode/Air/RateUp" instance=ExtResource("3_i5ycj")]
+[node name="RateUp2" parent="Night/WeatherSkillHomeNode/Air/RateUp" instance=ExtResource("3_i5ycj")]
 layout_mode = 0
 offset_top = 101.0
 offset_bottom = 151.0
 texture = ExtResource("5_43mgi")
 
-[node name="DistUp" parent="Night/HomeNode/Air" instance=ExtResource("3_i5ycj")]
+[node name="DistUp" parent="Night/WeatherSkillHomeNode/Air" instance=ExtResource("3_i5ycj")]
 layout_mode = 0
 offset_left = 51.0
 offset_top = 124.0
@@ -86,13 +86,13 @@ offset_right = 101.0
 offset_bottom = 174.0
 texture = ExtResource("6_u3260")
 
-[node name="DistUp2" parent="Night/HomeNode/Air/DistUp" instance=ExtResource("3_i5ycj")]
+[node name="DistUp2" parent="Night/WeatherSkillHomeNode/Air/DistUp" instance=ExtResource("3_i5ycj")]
 layout_mode = 0
 offset_top = 101.0
 offset_bottom = 151.0
 texture = ExtResource("6_u3260")
 
-[node name="Regular" parent="Night/HomeNode" instance=ExtResource("3_i5ycj")]
+[node name="Regular" parent="Night/WeatherSkillHomeNode" instance=ExtResource("3_i5ycj")]
 layout_mode = 0
 offset_left = 672.0
 offset_top = 95.0
@@ -100,7 +100,7 @@ offset_right = 722.0
 offset_bottom = 145.0
 texture = ExtResource("9_fcmxv")
 
-[node name="RateUp" parent="Night/HomeNode/Regular" instance=ExtResource("3_i5ycj")]
+[node name="RateUp" parent="Night/WeatherSkillHomeNode/Regular" instance=ExtResource("3_i5ycj")]
 layout_mode = 0
 offset_left = -47.0
 offset_top = 124.0
@@ -108,13 +108,13 @@ offset_right = 3.0
 offset_bottom = 174.0
 texture = ExtResource("5_43mgi")
 
-[node name="RateUp2" parent="Night/HomeNode/Regular/RateUp" instance=ExtResource("3_i5ycj")]
+[node name="RateUp2" parent="Night/WeatherSkillHomeNode/Regular/RateUp" instance=ExtResource("3_i5ycj")]
 layout_mode = 0
 offset_top = 101.0
 offset_bottom = 151.0
 texture = ExtResource("5_43mgi")
 
-[node name="DistUp" parent="Night/HomeNode/Regular" instance=ExtResource("3_i5ycj")]
+[node name="DistUp" parent="Night/WeatherSkillHomeNode/Regular" instance=ExtResource("3_i5ycj")]
 layout_mode = 0
 offset_left = 49.0
 offset_top = 124.0
@@ -122,7 +122,7 @@ offset_right = 99.0
 offset_bottom = 174.0
 texture = ExtResource("6_u3260")
 
-[node name="DistUp2" parent="Night/HomeNode/Regular/DistUp" instance=ExtResource("3_i5ycj")]
+[node name="DistUp2" parent="Night/WeatherSkillHomeNode/Regular/DistUp" instance=ExtResource("3_i5ycj")]
 layout_mode = 0
 offset_top = 101.0
 offset_bottom = 151.0
