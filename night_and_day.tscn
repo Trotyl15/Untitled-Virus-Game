@@ -1,0 +1,140 @@
+[gd_scene load_steps=10 format=3 uid="uid://dik76ms850gbj"]
+
+[ext_resource type="Script" path="res://night_and_day.gd" id="1_lv1gq"]
+[ext_resource type="PackedScene" uid="uid://bpdc8vvs1qspe" path="res://SkillTree/home_node.tscn" id="2_nvajc"]
+[ext_resource type="PackedScene" uid="uid://bb3hb2krwsnu6" path="res://SkillTree/skill_node.tscn" id="3_i5ycj"]
+[ext_resource type="Texture2D" uid="uid://ddvqcp4nrlqki" path="res://Assets/Temp/skills1.png" id="4_b5qgj"]
+[ext_resource type="Texture2D" uid="uid://dcdf4vg7f1p56" path="res://Assets/Temp/skills4.png" id="5_43mgi"]
+[ext_resource type="Texture2D" uid="uid://bdxmfemn0pmfl" path="res://Assets/Temp/skills5.png" id="6_u3260"]
+[ext_resource type="Texture2D" uid="uid://cp07qfuyrg8dw" path="res://Assets/Temp/skills2.png" id="8_7as5b"]
+[ext_resource type="PackedScene" uid="uid://c3vo73gucfwfd" path="res://map.tscn" id="9_0jy6g"]
+[ext_resource type="Texture2D" uid="uid://b8acq3ygt8bk0" path="res://Assets/Temp/skills3.png" id="9_fcmxv"]
+
+[node name="NightAndDay" type="Node2D"]
+script = ExtResource("1_lv1gq")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 1200)
+
+[node name="Night" type="Node2D" parent="."]
+position = Vector2(0, 876)
+
+[node name="WeatherSkillHomeNode" parent="Night" instance=ExtResource("2_nvajc")]
+
+[node name="Water" parent="Night/WeatherSkillHomeNode" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 93.0
+offset_right = 208.0
+offset_bottom = 143.0
+texture = ExtResource("4_b5qgj")
+
+[node name="RateUp" parent="Night/WeatherSkillHomeNode/Water" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_left = -47.0
+offset_top = 128.0
+offset_right = 3.0
+offset_bottom = 178.0
+texture = ExtResource("5_43mgi")
+
+[node name="RateUp2" parent="Night/WeatherSkillHomeNode/Water/RateUp" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_top = 101.0
+offset_bottom = 151.0
+texture = ExtResource("5_43mgi")
+
+[node name="DistUp" parent="Night/WeatherSkillHomeNode/Water" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 131.0
+offset_right = 92.0
+offset_bottom = 181.0
+texture = ExtResource("6_u3260")
+
+[node name="DistUp2" parent="Night/WeatherSkillHomeNode/Water/DistUp" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_top = 101.0
+offset_bottom = 151.0
+texture = ExtResource("6_u3260")
+
+[node name="Air" parent="Night/WeatherSkillHomeNode" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 92.0
+offset_right = 456.0
+offset_bottom = 142.0
+texture = ExtResource("8_7as5b")
+
+[node name="RateUp" parent="Night/WeatherSkillHomeNode/Air" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_left = -36.0
+offset_top = 122.0
+offset_right = 14.0
+offset_bottom = 172.0
+texture = ExtResource("5_43mgi")
+
+[node name="RateUp2" parent="Night/WeatherSkillHomeNode/Air/RateUp" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_top = 101.0
+offset_bottom = 151.0
+texture = ExtResource("5_43mgi")
+
+[node name="DistUp" parent="Night/WeatherSkillHomeNode/Air" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 124.0
+offset_right = 101.0
+offset_bottom = 174.0
+texture = ExtResource("6_u3260")
+
+[node name="DistUp2" parent="Night/WeatherSkillHomeNode/Air/DistUp" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_top = 101.0
+offset_bottom = 151.0
+texture = ExtResource("6_u3260")
+
+[node name="Regular" parent="Night/WeatherSkillHomeNode" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_left = 672.0
+offset_top = 95.0
+offset_right = 722.0
+offset_bottom = 145.0
+texture = ExtResource("9_fcmxv")
+
+[node name="RateUp" parent="Night/WeatherSkillHomeNode/Regular" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_left = -47.0
+offset_top = 124.0
+offset_right = 3.0
+offset_bottom = 174.0
+texture = ExtResource("5_43mgi")
+
+[node name="RateUp2" parent="Night/WeatherSkillHomeNode/Regular/RateUp" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_top = 101.0
+offset_bottom = 151.0
+texture = ExtResource("5_43mgi")
+
+[node name="DistUp" parent="Night/WeatherSkillHomeNode/Regular" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 124.0
+offset_right = 99.0
+offset_bottom = 174.0
+texture = ExtResource("6_u3260")
+
+[node name="DistUp2" parent="Night/WeatherSkillHomeNode/Regular/DistUp" instance=ExtResource("3_i5ycj")]
+layout_mode = 0
+offset_top = 101.0
+offset_bottom = 151.0
+texture = ExtResource("6_u3260")
+
+[node name="NightConfirm" type="Button" parent="Night"]
+offset_left = 1033.0
+offset_top = 579.0
+offset_right = 1073.0
+offset_bottom = 599.0
+
+[node name="Map" parent="." instance=ExtResource("9_0jy6g")]
+
+[connection signal="pressed" from="Night/NightConfirm" to="." method="_on_night_confirm_pressed"]

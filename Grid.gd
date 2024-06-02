@@ -2,12 +2,12 @@ extends "res://TileMap.gd"
 
 var rng
 var map_current=[]
-func _input(event):
-	var count=0
-	if Input.is_action_just_pressed("mb_left"):
-		var stats=[[0.01,0.02,0.03,0.02,0.01],[0.02,0.05,0,0.04,0.05],[0.1,0.2,0.3,0.2,0.1],[0.02,0.05,0,0.04,0.05],[0.01,0.02,0.03,0.02,0.01]]
-		if(count == 0):
-			spread(0.3,3,0.8,1,"E",stats)
+#func _input(event):
+	#var count=0
+	#if Input.is_action_just_pressed("mb_left"): # CHANGE
+		#var stats=[[0.01,0.02,0.03,0.02,0.01],[0.02,0.05,0,0.04,0.05],[0.1,0.2,0.3,0.2,0.1],[0.02,0.05,0,0.04,0.05],[0.01,0.02,0.03,0.02,0.01]]
+		#if(count == 0):
+			#spread(0.3,3,0.8,1,"E",stats)
 
 func _ready():
 	#pass # Replace with function body.
@@ -35,8 +35,8 @@ func _ready():
 			set_infected(num/19, num%19,1)
 			map_current[num/19][num%19]=0
 
-func spread(air_per:float, air_distance:int, water_per:float, water_level:int, wind_dir:String, stats):
-	
+func spread(air_per:float, air_distance:int, water_per:float, water_upgrade:bool, wind_dir:String, stats):
+	print(stats)
 	for x in range (0, 14):
 		for y in range (0, 19):
 			#print("spread")
@@ -89,7 +89,7 @@ func spread(air_per:float, air_distance:int, water_per:float, water_level:int, w
 							set_infected(x, y-1-air_distance, air_per)
 							set_infected(x+1, y-1-air_distance, air_per)
 		
-				if (water_level>0):
+				if water_upgrade:
 					if(y+1<19&&map[x][y+1]=="r"):
 						set_infected(x, y+4, water_per)
 					elif(y-1>=0&&map[x][y-1]=="r"):
