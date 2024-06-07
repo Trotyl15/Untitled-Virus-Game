@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://tfc35u7sr1wq"]
+
+[ext_resource type="Script" path="res://skill_tree.gd" id="1_3v28d"]
+[ext_resource type="Texture2D" uid="uid://bke8e00dnj5jk" path="res://src/backgrounds/treebg.png" id="1_7y3ai"]
+
+[node name="SkillTree" type="Node2D"]
+script = ExtResource("1_3v28d")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_7y3ai")
+
+[node name="Confirm" type="Button" parent="."]
+offset_left = 839.0
+offset_top = 499.0
+offset_right = 959.0
+offset_bottom = 552.0
+text = "Confirm"
+
+[connection signal="pressed" from="Confirm" to="." method="_on_confirm_pressed"]

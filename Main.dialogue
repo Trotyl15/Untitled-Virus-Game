@@ -1,0 +1,59 @@
+~ day0
+Reporter: Breaking news: A highly contagious virus has broken out in the city. Authorities are urging all residents to stay indoors and avoid contact with others.
+Reporter: Stay tuned for more updates.
+do get_tree().change_scene_to_file("res://skill_tree.tscn")
+=> END
+
+~ skill_tree
+: You know the truth—this virus is your creation. The ancient prophecy foretells that in 30 days, a cure will be discovered.
+: Your goal: eradicate humanity before the cure is found.
+: Every 3 nights, you will gain a point to spend on powerful virus upgrades. 
+: Delve into the skill tree, enhance your creation, and let the darkness spread. Choose wisely, for the fate of your sinister mission depends on it.
+=> END
+
+~ sunny
+Reporter: Good morning, welcome to today's weather report!
+Reporter: [[Get ready for a gorgeous sunny day with clear blue skies and a high of 78 degrees Fahrenheit. It's an ideal day for outdoor activities, so plan a visit to the beach or a hike in the park. Enjoy the wonderful weather!|It's a beautiful day ahead with clear skies and plenty of sunshine. Expect temperatures to reach a comfortable high of 75 degrees Fahrenheit. Perfect weather for outdoor activities, so make sure to enjoy the sunshine while it lasts!|We're in for a fantastic day with clear skies and abundant sunshine. Temperatures will soar to a delightful 80 degrees Fahrenheit, making it perfect for a picnic or a stroll in the park. Don't forget your sunglasses and sunscreen!]]
+do DaysAndNights.show_map()
+=> END
+
+~ windy
+Reporter: Good morning, welcome to today's weather report!
+if DaysAndNights.air_dir == "N":
+	Reporter: [[Today we have powerful winds blowing from *South to North* at speeds reaching up to 40 miles per hour. Be sure to bring in any loose outdoor items and take extra caution if you're on the road, especially if you're driving a large vehicle.|Hold onto your hats, because it's going to be a windy day. We have strong gusts blowing from *South to North* through the city, reaching speeds of up to 30 miles per hour. Secure any loose items outdoors and be cautious if you're driving high-profile vehicles.|It's a blustery day out there with strong winds coming from *South to North* at speeds up to 35 miles per hour. Make sure to secure any outdoor furniture and be cautious on the roads, especially if you're driving a high-profile vehicle.]]
+elif DaysAndNights.air_dir == "E":
+	Reporter: [[Today we have powerful winds blowing from *West to East* at speeds reaching up to 40 miles per hour. Be sure to bring in any loose outdoor items and take extra caution if you're on the road, especially if you're driving a large vehicle.|Hold onto your hats, because it's going to be a windy day. We have strong gusts blowing from *West to East* through the city, reaching speeds of up to 30 miles per hour. Secure any loose items outdoors and be cautious if you're driving high-profile vehicles.|It's a blustery day out there with strong winds coming from *West to East* at speeds up to 35 miles per hour. Make sure to secure any outdoor furniture and be cautious on the roads, especially if you're driving a high-profile vehicle.]]
+elif DaysAndNights.air_dir == "S":
+	Reporter: [[Today we have powerful winds blowing from *North to South* at speeds reaching up to 40 miles per hour. Be sure to bring in any loose outdoor items and take extra caution if you're on the road, especially if you're driving a large vehicle.|Hold onto your hats, because it's going to be a windy day. We have strong gusts blowing from *North to South* through the city, reaching speeds of up to 30 miles per hour. Secure any loose items outdoors and be cautious if you're driving high-profile vehicles.|It's a blustery day out there with strong winds coming from *North to South* at speeds up to 35 miles per hour. Make sure to secure any outdoor furniture and be cautious on the roads, especially if you're driving a high-profile vehicle.]]
+elif DaysAndNights.air_dir == "W":
+	Reporter: [[Today we have powerful winds blowing from *East to West* at speeds reaching up to 40 miles per hour. Be sure to bring in any loose outdoor items and take extra caution if you're on the road, especially if you're driving a large vehicle.|Hold onto your hats, because it's going to be a windy day. We have strong gusts blowing from *East to West* through the city, reaching speeds of up to 30 miles per hour. Secure any loose items outdoors and be cautious if you're driving high-profile vehicles.|It's a blustery day out there with strong winds coming from *East to West* at speeds up to 35 miles per hour. Make sure to secure any outdoor furniture and be cautious on the roads, especially if you're driving a high-profile vehicle.]]
+do DaysAndNights.show_map()
+=> END
+
+~ rainy
+Reporter: Good morning, welcome to today's weather report!
+Reporter: [[Make sure to grab your umbrellas before heading out, as we're expecting heavy rain throughout the day. Rainfall could accumulate up to 2 inches, with the possibility of localized flooding. Drive safely and stay dry!|A rainy day is in store for us, with heavy showers expected throughout the day. Rainfall could exceed 3 inches in some areas, so be prepared for potential flooding. If you're heading out, drive carefully and keep an eye out for waterlogged roads.|Expect persistent rain showers today, with total rainfall expected to reach 2 inches. Some areas may experience localized flooding, so be sure to avoid any waterlogged areas. Stay safe and dry out there!]]
+do DaysAndNights.show_map()
+=> END
+
+~ virus_report
+set DaysAndNights.dialogue_on = true
+Reporter: Good afternoon, here's today's virus update.
+Reporter: Residents in these areas are urged to comply with all health advisories and minimize outside activities. We'll keep you updated with the latest developments.
+do DaysAndNights.dialogue_on = false
+=> END
+
+~ last_weather_report
+Reporter: Good morning... (coughs)... welcome to... (coughs)...
+Reporter: I'm sorry... (struggles to catch breath)...
+=> END
+
+~ win
+...: ...
+...: ... ...
+=> END
+
+~ lose
+Reporter: Good morning, Breaking news just in!
+Reporter: Scientists have achieved a monumental breakthrough in our fight against the virus. A new antivirus has been developed, showing remarkable efficacy in early trials. This momentous discovery brings hope as we near the end of this pandemic. Stay tuned for more updates as we witness history in the making.
+=> END

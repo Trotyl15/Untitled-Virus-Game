@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://timhiq5g3gfe"]
+
+[ext_resource type="Script" path="res://report.gd" id="1_bxoxn"]
+[ext_resource type="Texture2D" uid="uid://bc66fa824fxkb" path="res://src/backgrounds/bg1.png" id="2_utcqi"]
+[ext_resource type="Texture2D" uid="uid://bbf6vdj66vt77" path="res://src/reports/virus.png" id="3_c08uq"]
+[ext_resource type="Script" path="res://Background.gd" id="3_i7udl"]
+[ext_resource type="Texture2D" uid="uid://dv1t3pf4cpowa" path="res://src/reports/tv.png" id="4_soakv"]
+
+[node name="Report" type="Node2D"]
+script = ExtResource("1_bxoxn")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_utcqi")
+script = ExtResource("3_i7udl")
+
+[node name="Report" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_c08uq")
+
+[node name="TV" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_soakv")
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
