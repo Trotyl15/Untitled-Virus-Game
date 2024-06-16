@@ -3,7 +3,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if(DaysAndNights.day==0):
+	if(DaysAndNights.day==1):
 		DialogueManager.show_dialogue_balloon(load("res://Main.dialogue"), "skill_tree")
 		
 

@@ -10,15 +10,20 @@ config_version=5
 
 [application]
 
-config/name="Untitled-Virus-Game-2"
+config/name="Untitled-virus-game"
+run/main_scene="res://report.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 DaysAndNights="*res://days_and_nights.gd"
-GlobalTileMap="*res://tileMap.gd"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+Map="*res://Map.gd"
+
+[display]
+
+window/stretch/mode="viewport"
 
 [editor_plugins]
 

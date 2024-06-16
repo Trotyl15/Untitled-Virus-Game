@@ -1,7 +1,10 @@
 ~ day0
 Reporter: Breaking news: A highly contagious virus has broken out in the city. Authorities are urging all residents to stay indoors and avoid contact with others.
 Reporter: Stay tuned for more updates.
-do get_tree().change_scene_to_file("res://skill_tree.tscn")
+do DaysAndNights.show_map()
+Reporter: This is a report showing the area infected.
+do DaysAndNights.dialogue_on = false
+#do get_tree().change_scene_to_file("res://skill_tree.tscn")
 => END
 
 ~ skill_tree
@@ -38,7 +41,8 @@ do DaysAndNights.show_map()
 
 ~ virus_report
 set DaysAndNights.dialogue_on = true
-Reporter: Good afternoon, here's today's virus update.
+[wait=2]
+Reporter: Good afternoon, this is day {{DaysAndNights.day}} after the virus outbreak, and here's today's update.
 Reporter: Residents in these areas are urged to comply with all health advisories and minimize outside activities. We'll keep you updated with the latest developments.
 do DaysAndNights.dialogue_on = false
 => END
@@ -46,14 +50,17 @@ do DaysAndNights.dialogue_on = false
 ~ last_weather_report
 Reporter: Good morning... (coughs)... welcome to... (coughs)...
 Reporter: I'm sorry... (struggles to catch breath)...
+do DaysAndNights.show_map()
 => END
 
 ~ win
 ...: ...
 ...: ... ...
+do get_tree().change_scene_to_file("res://win.tscn")
 => END
 
 ~ lose
 Reporter: Good morning, Breaking news just in!
 Reporter: Scientists have achieved a monumental breakthrough in our fight against the virus. A new antivirus has been developed, showing remarkable efficacy in early trials. This momentous discovery brings hope as we near the end of this pandemic. Stay tuned for more updates as we witness history in the making.
+do get_tree().change_scene_to_file("res://lose.tscn")
 => END

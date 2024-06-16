@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://fw86uw43dgu3"]
+
+[ext_resource type="Texture2D" uid="uid://bhfclt5xpt8fv" path="res://src/end/win.png" id="1_tji0a"]
+
+[node name="Win" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture = ExtResource("1_tji0a")

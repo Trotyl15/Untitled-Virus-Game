@@ -1117,8 +1117,6 @@ sources/0 = SubResource("TileSetAtlasSource_xfvl8")
 script = ExtResource("1_bxoxn")
 
 [node name="Background" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
 texture = ExtResource("2_utcqi")
 script = SubResource("GDScript_0fk3l")
 

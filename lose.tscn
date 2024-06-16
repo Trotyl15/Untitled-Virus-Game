@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://6g0m1hqeghvv"]
+
+[ext_resource type="Texture2D" uid="uid://brkix4boi5ntp" path="res://src/end/lose.PNG" id="1_fwkko"]
+
+[node name="Lose" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture = ExtResource("1_fwkko")
